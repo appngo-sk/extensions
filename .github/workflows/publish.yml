@@ -15,7 +15,9 @@ jobs:
           node-version: 14
       - run: npm install
       - run: npm build
-      - run: npm publish --dry-run
+      - run: ls build
+      - run: npm build && npm publish --dry-run
+      - run: ls build
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
