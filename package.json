@@ -20,8 +20,9 @@
     "build"
   ],
   "scripts": {
-    "clean": "tsc -b --clean",
+    "clean": "rm -rf build",
     "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm install && npm run clean && npm run build",
     "test": "mocha --checkLeaks -r tsconfig-paths/register -r ts-node/register \"test/**/*.test.ts\"",
     "test:ci": "nyc npm test"
   },
