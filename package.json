@@ -1,6 +1,6 @@
 {
   "name": "@appngo-sk/extensions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extensions for basic types.",
   "homepage": "https://github.com/appngo-sk/extensions#readme",
   "repository": "github:romanstrazanec/appngo-sk/extensions.git",
@@ -20,8 +20,9 @@
     "build"
   ],
   "scripts": {
-    "clean": "tsc -b --clean",
+    "clean": "rm -rf build",
     "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run clean && npm run build",
     "test": "mocha --checkLeaks -r tsconfig-paths/register -r ts-node/register \"test/**/*.test.ts\"",
     "test:ci": "nyc npm test"
   },
