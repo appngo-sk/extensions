@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "Extensions for basic types.",
   "homepage": "https://github.com/appngo-sk/extensions#readme",
-  "repository": "github:romanstrazanec/appngo-sk/extensions.git",
+  "repository": "github:appngo-sk/extensions",
   "bugs": {
     "url": "https://github.com/appngo-sk/extensions/issues",
     "email": "strazanec.roman@gmail.com"
