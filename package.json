@@ -8,7 +8,10 @@
     "url": "https://github.com/appngo-sk/extensions/issues",
     "email": "strazanec.roman@gmail.com"
   },
-  "keywords": [],
+  "keywords": [
+    "extensions",
+    "core"
+  ],
   "author": "AppNGo <appngo.sk@gmail.com> (https://github.com/appngo-sk)",
   "contributors": [
     "Roman Stražanec <strazanec.roman@gmail.com> (https://github.com/romanstrazanec)"
