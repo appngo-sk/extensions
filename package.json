@@ -17,13 +17,13 @@
     "Roman Stražanec <strazanec.roman@gmail.com> (https://github.com/romanstrazanec)"
   ],
   "license": "ISC",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "build"
+    "dist"
   ],
   "scripts": {
-    "clean": "rm -rf build",
+    "clean": "rm -rf dist",
     "build": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run clean && npm run build",
     "test": "mocha --checkLeaks -r tsconfig-paths/register -r ts-node/register -r source-map-support/register \"test/**/*.test.ts\"",
