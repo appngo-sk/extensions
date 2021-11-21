@@ -41,4 +41,18 @@ describe('Array', () => {
             expect([1].areNotEmpty()).to.be.true
         })
     })
+
+    describe('excluding()', () => {
+        it('returns an array without specified element', () => {
+            expect([1, 2, 3].excluding(2)).to.deep.eq([1, 3])
+        })
+
+        it('returns an array without specified elements', () => {
+            expect([1, 2, 3].excluding(1, 3)).to.deep.eq([2])
+        })
+
+        it('returns the same array if it does not include item to be excluded', () => {
+            expect([1, 2, 3].excluding(4)).to.deep.eq([1, 2, 3])
+        })
+    })
 })

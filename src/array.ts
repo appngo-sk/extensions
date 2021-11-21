@@ -9,6 +9,8 @@ declare global {
         isNotEmpty(): boolean
 
         areNotEmpty(): boolean
+
+        excluding(...items: T[]): Array<T>
     }
 }
 
@@ -31,6 +33,11 @@ Object.defineProperties(Array.prototype, {
     areNotEmpty: {
         value: function () {
             return !this.isEmpty()
+        }
+    },
+    excluding: {
+        value: function<T> (...items: T[]) {
+            return this.filter((e: T) => !items.includes(e))
         }
     }
 })
