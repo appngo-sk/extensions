@@ -55,4 +55,16 @@ describe('Array', () => {
             expect([1, 2, 3].excluding(4)).to.deep.eq([1, 2, 3])
         })
     })
+
+    describe('reject()', () => {
+        it('returns an array filtering by method', () => {
+            expect([1, 2, 2, 3].reject(e => e !== 2)).to.deep.eq([1, 3])
+        })
+    })
+
+    describe('uniq()', () => {
+        it('returns an array with unique elements', () => {
+            expect([1, 1, 2, 3, 2, 3, 1].uniq()).to.deep.eq([1, 2, 3])
+        })
+    })
 })
